@@ -10,19 +10,20 @@ class AiChatLivechatController(http.Controller):
 
         bot_partner = request.env.ref('base.partner_root')
         user_partner = request.env.user.partner_id
-        channel = request.env['mail.channel'].search([
+        channel_model = request.env['mail.channel'].sudo()
+        channel = channel_model.search([
             ('channel_type', '=', 'chat'),
             ('channel_partner_ids', 'in', [bot_partner.id]),
             ('channel_partner_ids', 'in', [user_partner.id]),
         ], limit=1)
         if not channel:
-            channel = request.env['mail.channel'].create({
+            channel = channel_model.create({
                 'channel_partner_ids': [(6, 0, [bot_partner.id, user_partner.id])],
                 'channel_type': 'chat',
                 'name': 'AI Livechat',
             })
 
-        channel.message_post(
+        channel.sudo().message_post(
             body=message,
             author_id=user_partner.id,
             message_type='comment',
