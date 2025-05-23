@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_frontend" name="ai_livechat assets" inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="module" src="/ai_livechat/static/src/js/ai_livechat.js"></script>
+        </xpath>
+    </template>
+</odoo>
