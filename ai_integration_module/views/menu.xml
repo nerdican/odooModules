@@ -1,0 +1,4 @@
+<odoo>
+    <menuitem id="ai_integration_menu_root" name="AI Integration" parent="base.menu_administration" sequence="60" groups="base.group_system"/>
+    <menuitem id="ai_integration_menu_users" name="AI Users" parent="ai_integration_menu_root" action="action_ai_integration_settings" sequence="10" groups="base.group_system"/>
+</odoo>

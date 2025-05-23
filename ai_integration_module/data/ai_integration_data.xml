@@ -1,0 +1,7 @@
+<odoo>
+    <record id="action_ai_integration_settings" model="ir.actions.act_window">
+        <field name="name">AI Users</field>
+        <field name="res_model">res.users</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
