@@ -44,6 +44,7 @@
     'data': [
         'security/res_groups.xml',
         'security/ir.model.access.csv',
+        'security/bot_rules.xml',
         'views/res_users.xml',
         'views/openai_log.xml',
         'views/menu.xml',

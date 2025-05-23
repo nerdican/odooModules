@@ -34,5 +34,11 @@
             <field name="users" eval="[Command.link(ref('base.user_root')), Command.link(ref('base.user_admin'))]"/>
             <field name="comment">Allow self editing ALL OpenAI settings: All in Medium + OpenAI Token, Max Tokens. Warning! This will allow the user to see the OpenAI token associated with him.</field>
         </record>
+
+        <record model="res.groups" id="group_ai_bot">
+            <field name="name">AI Bot</field>
+            <field name="category_id" ref="module_category_openai"/>
+            <field name="comment">Group for AI bot users</field>
+        </record>
     </data>
 </odoo>
