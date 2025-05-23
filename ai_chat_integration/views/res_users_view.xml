@@ -7,8 +7,8 @@
             <xpath expr="//form/sheet/notebook" position="inside">
                 <page string="AI Keys" name="page_ai_keys" groups="base.group_system">
                     <group>
-                        <field name="chatgpt_api_key" />
-                        <field name="gemini_api_key" />
+                        <field name="chatgpt_api_key" password="True" />
+                        <field name="gemini_api_key" password="True" />
                     </group>
                 </page>
             </xpath>
